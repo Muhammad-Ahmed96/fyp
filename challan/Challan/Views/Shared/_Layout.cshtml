@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        @{
+            @ViewBag.Title
+
+    }
+</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/bootstrap/js/bootstrap.min.js"></script>
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+@RenderSection("Scripts", false)
+</head>
+<body>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

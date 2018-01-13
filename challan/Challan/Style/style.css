@@ -1,0 +1,168 @@
+﻿    .container{
+        margin-top:40px; 
+    }
+    .shado {
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+        margin:0px auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+
+    span {
+        color: blue;
+    }
+
+    .inh span {
+        color: inherit;
+    }
+
+    .tab {
+        display: none;
+    }
+
+    #formid {
+        font-family: Raleway,Arial;
+    }
+
+    .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s;
+    }
+
+    @-webkit-keyframes animatebottom {
+        from {
+            bottom: -100px;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 0px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes animatebottom {
+        from {
+            bottom: -100px;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+
+
+    .animate-left{
+        position: relative;
+        -webkit-animation-name: slidein;
+        -webkit-animation-duration: 2s;
+        animation-name: slidein;
+        animation-duration: 2s;
+    }
+
+    @-webkit-keyframes slidein {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes slidein {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+         @-o-keyframes slidein {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+          @keyframes slidein {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+
+
+        .animate-right{
+        position: relative;
+        -webkit-animation-name: slideout;
+        -webkit-animation-duration: 2s;
+        animation-name: slideout;
+        animation-duration: 2s;
+    }
+
+    @-webkit-keyframes slideout {
+            from {
+                right: -100px;
+                opacity: 0;
+            }
+
+            to {
+                right: 0px;
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes slideout {
+           from {
+                right: -100px;
+                opacity: 0;
+            }
+
+            to {
+                right: 0px;
+                opacity: 1;
+            }
+        }
+         @-o-keyframes slideout {
+            from {
+                right: -100px;
+                opacity: 0;
+            }
+
+            to {
+                right: 0px;
+                opacity: 1;
+            }
+        }
+          @keyframes slideout {
+            from {
+                right: -100px;
+                opacity: 0;
+            }
+
+            to {
+                right: 0px;
+                opacity: 1;
+            }
+        }
