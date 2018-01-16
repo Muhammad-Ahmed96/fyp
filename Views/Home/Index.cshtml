@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Style/style.css" rel="stylesheet" />
+
+<div id="warden" class="tab-pane fade in active" style="margin-top:20px;">
+    <div class="col-lg-4 col-lg-offset-4 col-sm-12 col-md-12" id="warden-content">
+        <div class="shado" style="background-color: #f2f2f2; border-radius:5px;">
+            <div id="formid" style="padding: 10px 30px 20px 30px;">
+                <h1 style="text-align: center;">Sign In:</h1>
+                <div class="tab animate-bottom">
+                    <label>Username:</label>
+                    <p><input type="text" name="uname" placeholder="Usernmae..." class="form-control" id="uname"></p>
+                </div>
+                <div class="tab animate-bottom">
+                    <strong>Email:</strong> <p style="display:inline" id="e"></p><br />
+                    Password:
+                    <p><input type="password" name="pass" placeholder="Password..." class="form-control" id="upass"></p>
+                </div>
+                <div style="overflow:auto;">
+                    <div id="btn-div">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn btn-default">Previous</button>
+                        <button type="button" id="nextBtn" class="btn btn-success btn-block">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("#nextBtn").click(function () {
+            nextPrev(1);
+            $(this).attr('id', 'submitBtn');
+        });
+
+
+        
+    });
+</script>

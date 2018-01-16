@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "CheckStatus";
+}
+
+
+<div class="col-lg-4 col-lg-offset-4 col-sm-4 col-xs-4">
+    <h2 style="text-align:center">CheckStatus</h2>
+    <label>Eneter Challan No#</label>
+    <div class="form-inline">
+        <div class="form-group">
+            <input type="text" name="challan_no" placeholder="Enter Challan Number..." class="form-control" id="cno" />
+            <input type="button" name="button" value="Search" class="btn btn-danger" id="sBtn" onclick="displayStatus()" />
+        </div>
+    </div>
+    <button class="btn btn-link"><a href="http://fyp-17.apphb.com/Home/Index">Back</a></button>
+</div>
+<div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-12" id="c-status" style="display:none"> 
+    
+</div>
+<script>
+    function displayStatus() {
+        var value = $("#cno").val();
+        alert(value);
+        if (value == '123') {
+            document.getElementById("c-status").innerHTML="<h2>Your Challan Status : <strong class='text-danger'><font size='7'>UN PAID</font></strong></h2>";
+            document.getElementById("c-status").style.display = "block";
+        }
+        else {
+            document.getElementById("c-status").innerHTML = "<h2>No Challan Found!</h2>";
+            document.getElementById("c-status").style.display = "block";
+        }
+    }
+</script>
