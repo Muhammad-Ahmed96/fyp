@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "PayChallan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-4 col-lg-offset-4 col-sm-4 col-xs-4">
+    <h2 style="text-align:center">PayChallan</h2> 
+    <label>Eneter Challan No#</label> 
+    <div class="form-inline">
+        <div class="form-group">
+            <input type="text" name="challan_no" placeholder="Enter Challan Number..." class="form-control" id="cno"/>
+            <input type="button" name="button" value="Search" class="btn btn-danger" id="sBtn" onclick="displayTable()"/>
+        </div>
+    </div>
+    <button class="btn btn-link"><a href="http://localhost:23187/Home/Index">Back</a></button>
+</div>
+<div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-4">
+    <table style="display:none" id="c-table" class="table table-responsive table-bordered tab tab">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                CNIC
+            </th>
+            <th>
+                Reason
+            </th>
+            <th>
+                Amount
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Muhammad Ahmed
+            </td>
+            <td>
+                33403-0403870-5
+            </td>
+            <td>
+                One Wheeling
+            </td>
+            <td>
+                1500
+            </td>
+            <td>
+                Not paid
+            </td>
+        </tr>
+    </table>
+    <div style="display:none" id="n">
+        <h1 class="text-danger">No Challan Found!</h1>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("c-table").style.display = "none";
+    });
+    function displayTable() {
+        var c = $("#cno").val();
+        if (c.equals("123")) {
+            document.getElementById("c-table").style.display = "block";
+        }
+        else {
+            document.getElementById("n").style.display = "block";
+        }
+    }
+</script>
+

@@ -1,6 +1,36 @@
 ﻿var currTab = 0;
 showTab(currTab);
 
+$("#submitBtn").click(function () {
+    
+});
+
+function test() {
+    alert("checking");
+    var uname = $("#uname").val();
+    var pass = $("#upass").val();
+
+    var d = { "username": uname, "password": pass };
+
+    var settings = {
+        type: "POST",
+        dataType: "json",
+        url: '/Challan/Submit',
+        data: d,
+        success: function (resp) {
+            if (resp.valid == "true") {
+                location.href = resp.urlToRedirect;
+            } else {
+                alert("Invalid Login");
+            }
+        },
+        error: function () {
+            alert("error");
+        }
+    };
+    $.ajax(settings);
+    return false;
+}
 function showTab(n) {
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
@@ -26,7 +56,7 @@ function nextPrev(n) {
     x[currTab].style.display = "none";
     currTab = currTab + n;
     if (currTab >= x.length) {
-        document.getElementById("formid").submit();
+        test();
     }
     showTab(currTab);
 }
