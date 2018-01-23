@@ -50,11 +50,17 @@
                 <option value="Other">1000</option>
             </select>
             <br />
-            <button class="btn btn-success btn-block" id="c_submit">Submit</button>
+            <div style="display:flex;flex-direction:row;justify-content:space-between">
+                <button type="button" class="btn btn-link" id="back-btn">Back</button>
+                <button class="btn btn-success" id="c_submit">Submit</button>
+            </div>
         </div>
     </div>
 </div>
 <script>
+    $("#back-btn").click(function () {
+        location.href = "http://fyp-17.apphb.com//Home/Index";
+    });
     $("#c_submit").click(function () {
         alert("Challan Submitted");
     });
