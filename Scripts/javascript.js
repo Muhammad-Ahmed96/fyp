@@ -42,11 +42,11 @@ function showTab(n) {
         document.getElementById("prevBtn").style.display = "inline";
     }
 
-    if (n == (x.length - 1)) {
+    /*if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Submit";
     } else {
         document.getElementById("nextBtn").innerHTML = "Next";
-    }
+    }*/
 }
 
 function nextPrev(n) {

@@ -13,10 +13,10 @@
             <input type="button" name="button" value="Search" class="btn btn-danger" id="sBtn" onclick="displayTable()"/>
         </div>
     </div>
-    <button class="btn btn-link"><a href="http://fyp-17.apphb.com/Home/Index">Back</a></button>
+    <button class="btn btn-link"><a href="http://localhost:23187/Home/Index">Back</a></button>
 </div>
-<div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-4" style="display:none" id="c-table">
-    <table class="table table-responsive table-bordered tab tab">
+<div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-12" style="display:none" id="c-table">
+    <table class="table table-responsive table-bordered">
         <tr>
             <th>
                 Name
@@ -55,6 +55,9 @@
     <div style="display:none" id="n">
         <h1 class="text-danger">No Challan Found!</h1>
     </div>
+    <div class="col-lg-4">
+        <button class="btn btn-info" id="pay-btn">Pay Challan</button>
+    </div>
 </div>
 
 <script>
@@ -63,12 +66,16 @@
     });
     function displayTable() {
         var c = $("#cno").val();
-        if (c.equals("123")) {
+        if (c=="123") {
             document.getElementById("c-table").style.display = "block";
         }
         else {
             document.getElementById("n").style.display = "block";
         }
     }
+
+    $("#pay-btn").click(function () {
+        location.href = "http://localhost:23187/Challan/CardDetails";
+    });
 </script>
 

@@ -14,18 +14,20 @@
                 <div class="tab animate-bottom">
                     <label>Username:</label>
                     <p><input type="text" name="uname" placeholder="Usernmae..." class="form-control" id="uname"></p>
+                    <button type="button" id="nextBtn" class="btn btn-success btn-block">Next</button>
                 </div>
                 <div class="tab animate-bottom">
                     <strong>Email:</strong> <p style="display:inline" id="e"></p><br />
                     Password:
                     <p><input type="password" name="pass" placeholder="Password..." class="form-control" id="upass"></p>
-                </div>
-                <div style="overflow:auto;">
-                    <div id="btn-div">
-                        <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn btn-default">Previous</button>
-                        <button type="button" id="nextBtn" class="btn btn-success btn-block">Next</button>
+                    <div style="overflow:auto;">
+                        <div id="btn-div" style="float:right">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="btn btn-default">Previous</button>
+                            <button type="button" id="submitBtn" class="btn btn-success">Submit</button>
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -33,12 +35,35 @@
 
 <script>
     $(function () {
+        var val="";
+        var pass="";
         $("#nextBtn").click(function () {
+            val = $("#uname").val();
+            if (val == "") {
+                alert("User name cannot be Empty");
+                return false;
+            }
+            else {
+                $("#e").html(val);
+            }
             nextPrev(1);
-            $(this).attr('id', 'submitBtn');
         });
 
-
-        
+        $("#submitBtn").click(function () {
+            pass = $("#upass").val();
+            if (pass == "") {
+                alert("Password cannot be Empty");
+                return false;
+            }
+            if(val=="admin" && pass=="admin")
+            {
+                window.location.href = "http://localhost:23187/Challan/SubmitChallan";
+            }
+            else {
+                alert(val);
+                alert(pass);
+                alert("Username and Password Does not match");
+            }
+        });
     });
 </script>

@@ -163,6 +163,7 @@
     <Content Include="Views\Challan\Complain.cshtml" />
     <Content Include="Views\Challan\Feedback.cshtml" />
     <Content Include="Views\Challan\CheckStatus.cshtml" />
+    <Content Include="Views\Challan\CardDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

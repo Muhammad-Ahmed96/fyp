@@ -30,6 +30,10 @@ namespace Challan.Controllers
         {
             return View();
         }
+        public ActionResult CardDetails()
+        {
+            return View();
+        }
         [HttpPost]
         public JsonResult Submit(string username,string password )
         {

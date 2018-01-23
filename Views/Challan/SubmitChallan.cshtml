@@ -3,5 +3,59 @@
     ViewBag.Title = "SubmitChallan";
 }
 
-<h2>SubmitChallan</h2>
+<h2 style="text-align:center">Submit Challan</h2>
+<div class="col-lg-6 col-lg-offset-3 col-sm-12 col-xs-12" style="border:solid 1px black;background-color:#fff;border-radius:5px;padding-top:7px">
 
+    
+    <div style="display:flex;flex-direction:row;justify-content:space-between">
+        <div>
+            <strong class="text-danger">Challn N0#</strong><strong> CHLHR123</strong>
+        </div>
+        <div>
+            <strong>Date:16-Jan-2018</strong>
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <label>Challan Bearer's Name</label>
+            <input type="text" name="bname"  placeholder="Enter Name..." id="bname" class="form-control"/>
+            <label>Challan Bearer's CNIC</label>
+            <input type="text" name="bcnic" placeholder="Enter CNIC..." id="bcnic" class="form-control" />
+            <label>Select Vehicle Type</label>
+            <select class="form-control" name="vehicle_type">
+                <option value="car">Car</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="Truck">Truck</option>
+                <option value="v_Other">Other</option>
+            </select>
+            <label>Vehicle Number#</label>
+            <input type="text" name="vehicle_no" id="vehicle_no" class="form-control" />
+            <label>Violation Type</label>
+            <select class="form-control" name="violation_type">
+                <option value="one_wheel">One Wheeling</option>
+                <option value="helmet">Helmet</option>
+                <option value="Signal">Signal Break</option>
+                <option value="c_Other">Other</option>
+            </select>
+            <label>Location</label>
+            <input type="text" name="loc" id="loc" class="form-control" placeholder="Location..." />
+            <br />
+            <button class="btn btn-warning btn-block">Get Location</button>
+            <label>Select Amount</label>
+            <select class="form-control" name="amount">
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="Other">1000</option>
+            </select>
+            <br />
+            <button class="btn btn-success btn-block" id="c_submit">Submit</button>
+        </div>
+    </div>
+</div>
+<script>
+    $("#c_submit").click(function () {
+        alert("Challan Submitted");
+    });
+</script>

@@ -32,24 +32,24 @@
             <div class="tab-content">
                 <div id="challan" class="tab-pane fade">
                     <div class="row" style="box-sizing:border-box;padding:10px">
-                        <a href="http://fyp-17.apphb.com/Challan/PayChallan">
+                        <a href="http://localhost:23187/Challan/PayChallan">
                             <div class="col-lg-5 col-lg-offset-1 animate-left box-shadow" id="pay-challan" style="cursor:pointer; margin-right:10px;margin-bottom:5px;margin-top:5px; height: 150px; background-color: black; color: white; text-align: center; border: solid 1px black; padding-top: 25px; ">
                                 <h1>Pay Challan</h1>
                             </div>
                         </a>
-                        <a href="http://fyp-17.apphb.com/Challan/CheckStatus">
+                        <a href="http://localhost:23187/Challan/CheckStatus">
                             <div class="col-lg-5 animate-right box-shadow" id="check=challan-status" style="cursor: pointer; margin-right: 10px; margin-top: 5px; margin-bottom: 5px; height: 150px; background-color: blue; color: white; text-align: center; border: solid 1px blue; padding-top: 25px">
                                 <h1>Check Challan Status</h1>
                             </div>
                         </a>
                     </div>
                     <div class="row" style="box-sizing:border-box;padding:10px">
-                        <a href="http://fyp-17.apphb.com/Challan/Complain">
+                        <a href="http://localhost:23187/Challan/Complain">
                             <div class="col-lg-5 col-lg-offset-1 animate-left box-shadow" id="report-complain" style="cursor: pointer; margin-right: 10px; margin-bottom: 5px; margin-top: 5px; height: 150px; background-color: red; color: white; text-align: center; border: solid 1px black; padding-top: 25px; ">
                                 <h1>Report Complain</h1>
                             </div>
                         </a>
-                        <a href="http://fyp-17.apphb.com/Challan/Feedback">
+                        <a href="http://localhost:23187/Challan/Feedback">
                             <div class="col-lg-5 animate-right box-shadow" id="give-feedback" style="cursor: pointer; margin-right: 10px; margin-top: 5px; margin-bottom: 5px; height: 150px; background-color: orange; color: white; text-align: center; border: solid 1px blue; padding-top: 25px">
                                 <h1>Give Feedback</h1>
                             </div>
@@ -72,10 +72,12 @@
     <script>
 
         $("#litem1").click(function () {
-            document.location.href = "http://fyp-17.apphb.com/Home/Index";
+            alert("Clicked");
+            location.href = "http://localhost:23187/Home/Index";
         });
         $("#litem2").click(function () {
-            document.location.href = "http://fyp-17.apphb.com/Home/Index";
+            alert("Clicked");
+            location.href = "http://localhost:23187/Home/Index";
         });
         /*$(document).ready(function () {
             $("#litem2").addClass("active");

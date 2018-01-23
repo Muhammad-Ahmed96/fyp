@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "CardDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-lg-6 col-lg-offset-3 col-sm-12 col-xs-12" style="border:solid 1px black;padding-bottom:20px">
+
+    <h2 style="text-align:center">Card Details</h2>
+    <div>
+        <form action="/" method="post">
+            <label><strong>Card No#</strong></label>
+            <input type="text" name="card_no"  placeholder="Card Numebr" class="form-control"/>
+            <label><strong>Expiration Date</strong></label>
+            <input type="text" name="exp-date" class="form-control"/>
+            <label><strong>Security Code#</strong></label>
+            <input type="text" name="security"  placeholder="Security Code" class="form-control"/>
+            <label><strong>Name on Card#</strong></label>
+            <input type="text" name="name" placeholder="Name on Card" class="form-control"/>
+            <br />
+            <div style="display:flex;flex-direction:row;justify-content:space-between">
+                <select name="country" class="form-control">
+                    <option value="pakistan">Pakistan</option>
+                    <option value="India">India</option>
+                </select>
+                <input type="text" name="zip" placeholder="Zip/Postal Code" class="form-control"/>
+            </div>
+            <br />
+            <div style="display:flex;flex-direction:row;justify-content:space-between">
+                <button type="button" class="btn btn-link" id="back-btn">Back</button>
+                <button type="submit" class="btn btn-danger" id="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    $("#back-btn").click(function () {
+        location.href = "http://localhost:23187/Home/Index";
+    });
+
+    $("#submit-btn").click(function () {
+        alert("Challan Submitted");
+    });
+</script>
